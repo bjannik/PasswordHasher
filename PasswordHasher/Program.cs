@@ -1,9 +1,5 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
-using System.Security.Cryptography;
-using ConsoleProgram.Services.PasswordManager;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
+using PasswordManager.Services.PasswordManager;
 
 namespace ConsoleProgram
 {
