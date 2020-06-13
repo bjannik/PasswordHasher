@@ -35,8 +35,5 @@ namespace ConsoleProgram.Services.PasswordManager
         {
             return (Convert.ToBase64String(input) == Convert.ToBase64String(toCheck));
         }
-
-
-
     }
 }
