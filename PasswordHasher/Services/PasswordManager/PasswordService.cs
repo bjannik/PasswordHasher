@@ -29,9 +29,7 @@ namespace PasswordManager.Services.PasswordManager
             }
         }
 
-        static internal bool Check(byte[] input, byte[] toCheck)
-        {
-            return (Convert.ToBase64String(input) == Convert.ToBase64String(toCheck));
-        }
+        static internal bool Check(byte[] input, byte[] check)
+            => (Convert.ToBase64String(input) == Convert.ToBase64String(check));
     }
 }
