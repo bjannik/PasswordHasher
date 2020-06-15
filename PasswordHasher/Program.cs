@@ -1,5 +1,6 @@
-﻿using System;
+﻿using Microsoft.Extensions.Configuration;
 using PasswordManager.Services.PasswordManager;
+using System;
 
 namespace ConsoleProgram
 {
@@ -7,16 +8,9 @@ namespace ConsoleProgram
     {
         private static void Main(string[] args)
         {
-            Example();
+            EmailService.SendMail();
+
         }
 
-        private static void Example()
-        {
-            byte[] passwordSalt = PasswordService.GenerateSalt();
-            byte[] passwordHash = PasswordService.ComputeHash("abcd", passwordSalt);
-            byte[] passwordHash2 = PasswordService.ComputeHash("abcd", passwordSalt);
-
-            Console.WriteLine(PasswordService.Check(passwordHash, passwordHash2));
-        }
     }
 }
